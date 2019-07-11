@@ -1,0 +1,81 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    
+}
+h2{
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #e78bd3;
+}
+#chat{
+    max-width: 600px;
+    margin: 30px auto;
+    border: 3px solid #ddd;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+    border-radius: 2px;
+}
+#chat-window{
+    height: 400px;
+    overflow: auto;
+    background-color: #333;
+}
+#typing {
+    background-color: #333;
+    color: rgb(233, 233, 233);
+    font-style: italic;
+    font-size: 14px;
+    min-height: 16px;
+}
+#typing .people-typing span:first-of-type::before {
+    content: 'Typing: '
+}
+#typing .people-typing span:last-of-type::after {
+    content: '';
+}
+#typing .people-typing span::after {
+    content: ', ';
+}
+#output p{
+    min-height: 30px;
+    line-height: 30px;
+    margin: 0 20px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+#output p.error {
+    color: red;
+}
+#feedback p{
+    color: #aaa;
+    padding: 14px 0px;
+    margin: 0 20px;
+}
+label{
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+}
+input{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 0;
+    display: block;
+    width: 100%;
+    background: #fff;
+    /* border-bottom: 1px solid #e78bd3; */
+    font-size: 16px;
+}
+button{
+    background: #ecee67;
+    color: #333;
+    font-size: 18px;
+    border: 0;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+}
+button:hover {
+    background: #c474b2;
+}

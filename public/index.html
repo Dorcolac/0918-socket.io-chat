@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="chat">
+        <div id="chat-window">
+            <div id="output"></div>
+        </div>
+        
+        <div id="typing">
+            <span class="people-typing"></span>
+        </div>
+
+        <input id="message" onkeypress="keyboardSend(event)" type="text">
+        <button id="send" onclick="sendMessage()">BUTTON</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="js/socket.io.js"></script>
+</body>
+</html>
