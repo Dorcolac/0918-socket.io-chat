@@ -6,8 +6,10 @@ var username = prompt('Please pick your username');
 
 
 if (username && username !== '' && username.length <= 15) {
+    socket = io.connect('http://localhost:3000');
+    // CHANGE TO INTERNAL IP ADRESS (IPV4)
+    // TO BE ABLE TO COMMUNICATE ON LOCAL NETWORK
     
-    socket = io.connect('http://192.168.50.89:3000');
     socket.emit('userJoined', username);
     message.focus;
     
@@ -49,7 +51,6 @@ if (username && username !== '' && username.length <= 15) {
     socket.on('userText', function(data) {
         output.innerHTML += '<p class="message"><strong style="color:' + data.color + '">' + data.user + '</strong>: ' + data.msg + '</p>';
         var chat = document.getElementById('chat-window');
-        // console.log(chat.scrollTop, chat.clientHeight, chat.scrollHeight);
         if (chat.scrollTop > chat.scrollHeight - chat.clientHeight - 400) {
             chat.scrollTop = chat.scrollHeight;
         } else {
